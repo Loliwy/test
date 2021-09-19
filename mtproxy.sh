@@ -72,8 +72,8 @@ check_pid(){
 Download_mtproxy(){
 	mkdir '/tmp/mtproxy'
 	cd '/tmp/mtproxy'
-	# wget -N --no-check-certificate "https://github.com/TelegramMessenger/MTProxy/archive/master.zip"
-	git clone https://github.com/TelegramMessenger/MTProxy.git
+	# wget -N --no-check-certificate "git://github.com/TelegramMessenger/MTProxy/archive/master.zip"
+	git clone git://github.com/TelegramMessenger/MTProxy.git
 	[[ ! -e "MTProxy/" ]] && echo -e "${Error} MTProxy 下载失败!" && cd '/tmp' && rm -rf '/tmp/mtproxy' && exit 1
 	cd MTProxy
 	make
